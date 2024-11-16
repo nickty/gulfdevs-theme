@@ -12,8 +12,8 @@ function gulfdevs_setup() {
 add_action('after_setup_theme', 'gulfdevs_setup');
 
 function gulfdevs_enqueue_scripts() {
-    wp_enqueue_style('gulfdevs-style', get_stylesheet_uri(), array(), '1.0.0');
-    wp_enqueue_style('gulfdevs-tailwind', get_template_directory_uri() . '/assets/css/tailwind.css', array(), '1.0.0');
+    wp_enqueue_style('gulfdevs-style', get_stylesheet_uri(), array(), '1.0.1');
+    wp_enqueue_style('gulfdevs-tailwind', get_template_directory_uri() . '/assets/css/tailwind.css', array(), '1.0.1');
     wp_enqueue_script('gulfdevs-script', get_template_directory_uri() . '/assets/js/script.js', array(), '1.0.0', true);
 }
 add_action('wp_enqueue_scripts', 'gulfdevs_enqueue_scripts');
@@ -23,6 +23,7 @@ function gulfdevs_enqueue_styles() {
     wp_enqueue_style('gulfdevs-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), $css_version);
 }
 add_action('wp_enqueue_scripts', 'gulfdevs_enqueue_styles');
+
 
 function gulfdevs_customize_register($wp_customize) {
     $wp_customize->add_section('gulfdevs_hero_section', array(
