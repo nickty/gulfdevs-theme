@@ -10,7 +10,7 @@ wp-content/backups/
 node_modules/
 
 # Compiled CSS
-assets/css/style.css
+# assets/css/style.css
 
 # Log files
 *.log
