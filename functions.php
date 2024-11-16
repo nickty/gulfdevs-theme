@@ -20,7 +20,7 @@ add_action('wp_enqueue_scripts', 'gulfdevs_enqueue_scripts');
 
 function gulfdevs_enqueue_styles() {
     $css_version = filemtime(get_stylesheet_directory() . '/assets/css/style.css');
-    wp_enqueue_style('gulfdevs-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), $css_version);
+    wp_enqueue_style('gulfdevs-new-style', get_stylesheet_directory_uri() . '/assets/css/style.css', array(), $css_version);
 }
 add_action('wp_enqueue_scripts', 'gulfdevs_enqueue_styles');
 
