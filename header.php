@@ -9,7 +9,7 @@
 <body <?php body_class('min-h-screen flex flex-col'); ?>>
 <?php wp_body_open(); ?>
 
-<header class="px-4 lg:px-6 h-16 flex items-center justify-between border-b">
+<header class="px-3 lg:px-6 h-16 flex items-center justify-between border-b">
     <a href="<?php echo esc_url(home_url('/')); ?>" class="flex items-center justify-center">
         <span class="text-2xl font-bold bg-gradient-to-r from-primary to-primary-foreground bg-clip-text text-transparent">
             <?php bloginfo('name'); ?>
