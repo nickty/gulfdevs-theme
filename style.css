@@ -1,24 +1,13 @@
 /*
-Theme Name: GulfDevs Theme
+Theme Name: GulfDevs
+Theme URI: https://gulfdevs.com
 Author: Your Name
-Description: A custom theme for GulfDevs web development services.
+Author URI: https://gulfdevs.com
+Description: A modern WordPress theme for GulfDevs web development business
 Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gulfdevs
 */
 
-body {
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px 20px;
-}
-.hero {
-    background: url('path/to/hero-image.jpg') no-repeat center center/cover;
-    color: #fff;
-    padding: 100px 20px;
-    text-align: center;
-}
+/* The rest of your styles will be in assets/css/tailwind.css */
