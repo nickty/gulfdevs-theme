@@ -19,7 +19,7 @@ function gulfdevs_enqueue_assets() {
 
     // Enqueue Tailwind CSS
     wp_enqueue_style('gulfdevs-tailwind', get_template_directory_uri() . '/assets/css/tailwind.css', array(), '1.0.1');
-
+    
     // Enqueue main CSS with cache busting
     $css_file = get_stylesheet_directory() . '/assets/css/style.css';
     if (file_exists($css_file)) {
