@@ -70,3 +70,24 @@ function gulfdevs_enqueue_rtl_styles() {
     }
 }
 add_action('wp_enqueue_scripts', 'gulfdevs_enqueue_rtl_styles');
+
+function gulfdevs_register_strings() {
+    if (function_exists('pll_register_string')) {
+        pll_register_string('hero_title', 'Innovative Web Solutions for the Gulf', 'GulfDevs Theme');
+        pll_register_string('hero_subtitle', 'Empowering businesses with cutting-edge technology', 'GulfDevs Theme');
+        pll_register_string('explore_services', 'Explore Our Services', 'GulfDevs Theme');
+        pll_register_string('contact_us', 'Contact Us', 'GulfDevs Theme');
+        pll_register_string('our_services', 'Our Services', 'GulfDevs Theme');
+        pll_register_string('custom_web_development', 'Custom Web Development', 'GulfDevs Theme');
+        pll_register_string('ecommerce_solutions', 'E-commerce Solutions', 'GulfDevs Theme');
+        pll_register_string('uiux_design', 'UI/UX Design', 'GulfDevs Theme');
+        pll_register_string('database_solutions', 'Database Solutions', 'GulfDevs Theme');
+        pll_register_string('custom_web_development_desc', 'Tailored websites built with cutting-edge technology', 'GulfDevs Theme');
+        pll_register_string('ecommerce_solutions_desc', 'Secure and scalable online stores', 'GulfDevs Theme');
+        pll_register_string('uiux_design_desc', 'Beautiful, user-friendly interfaces', 'GulfDevs Theme');
+        pll_register_string('database_solutions_desc', 'Robust data management systems', 'GulfDevs Theme');
+        pll_register_string('testimonial_quote', 'GulfDevs transformed our online presence. Their understanding of local markets is unparalleled.', 'GulfDevs Theme');
+        pll_register_string('testimonial_author', 'Ahmed Al-Mansour, CEO of Gulf Innovations', 'GulfDevs Theme');
+    }
+}
+add_action('after_setup_theme', 'gulfdevs_register_strings');
