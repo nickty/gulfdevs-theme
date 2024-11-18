@@ -1,0 +1,11 @@
+body {
+    direction: rtl;
+    unicode-bidi: embed;
+}
+
+.language-switcher::after {
+    right: auto;
+    left: 5px;
+}
+
+/* Add more RTL-specific styles as needed */
