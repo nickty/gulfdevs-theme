@@ -1,13 +1,19 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 100 100" fill="none">
+  <!-- Background Gradient -->
   <defs>
-    <!-- Define a repeating pattern -->
-    <pattern id="minimal-arabic-pattern" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-      <!-- Diamond shape -->
-      <path d="M 10 0 L 20 10 L 10 20 L 0 10 Z" fill="#004d7a" opacity="0.8" />
-      <!-- Circle inside -->
-      <circle cx="10" cy="10" r="3" fill="#00c6ff" opacity="0.6" />
-    </pattern>
+    <radialGradient id="background-gradient" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#f7f7f7" />
+      <stop offset="100%" stop-color="#eaeaea" />
+    </radialGradient>
   </defs>
-  <!-- Background using the pattern -->
-  <rect width="100" height="100" fill="url(#minimal-arabic-pattern)" />
+  <rect width="100" height="100" fill="url(#background-gradient)" />
+
+  <!-- Central Arabic-Inspired Motif -->
+  <g transform="translate(50, 50)">
+    <!-- Outer Ring -->
+    <circle cx="0" cy="0" r="30" stroke="#004d7a" stroke-width="2" fill="none" />
+    <!-- Star Design -->
+    <path d="M0,-20 L5,-5 L20,-5 L8,5 L12,20 L0,10 L-12,20 L-8,5 L-20,-5 L-5,-5 Z" 
+          fill="#00c6ff" opacity="0.7" />
+  </g>
 </svg>

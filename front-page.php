@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
 <main class="flex-1">
-    <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-primary/5 via-primary/10 to-transparent" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/arabic-pattern.svg'); background-size: cover; background-position: center;">
+    <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-primary/5 via-primary/10 to-transparent" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/arabic-pattern.svg'); background-size: contain; background-repeat: no-repeat; background-position: center;">
         <div class="container px-4 md:px-6 mx-auto">
             <div class="flex flex-col items-center space-y-4 text-center">
                 <div class="space-y-2">
