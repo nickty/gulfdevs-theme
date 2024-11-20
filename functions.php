@@ -156,8 +156,3 @@ function gulfdevs_register_portfolio_strings() {
     }
 }
 add_action('after_setup_theme', 'gulfdevs_register_portfolio_strings');
-
-function gulfdevs_enqueue_custom_styles() {
-    wp_enqueue_style('gulfdevs-custom-styles', get_template_directory_uri() . '/css/custom-styles.css', array(), '1.0.0');
-}
-add_action('wp_enqueue_scripts', 'gulfdevs_enqueue_custom_styles');
