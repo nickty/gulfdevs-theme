@@ -27,7 +27,7 @@
     <section id="services" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
         <div class="container px-4 md:px-6 mx-auto">
             <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-                <?php esc_html_e('Our Services', 'gulfdevs'); ?>
+                <?php esc_html_e(pll__(get_theme_mod('our_services', 'Our Services'))); ?>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <?php

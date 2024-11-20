@@ -91,3 +91,13 @@ function gulfdevs_register_strings() {
     }
 }
 add_action('after_setup_theme', 'gulfdevs_register_strings');
+
+function gulfdevs_register_footer_strings() {
+    if (function_exists('pll_register_string')) {
+        pll_register_string('GulfDevs', 'GulfDevs', 'Footer');
+        pll_register_string('All rights reserved', 'All rights reserved.', 'Footer');
+        pll_register_string('Privacy Policy', 'Privacy Policy', 'Footer');
+        pll_register_string('Terms of Service', 'Terms of Service', 'Footer');
+    }
+}
+add_action('after_setup_theme', 'gulfdevs_register_footer_strings');
