@@ -9,21 +9,21 @@ get_header();
     <section class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
         <div class="container px-4 md:px-6 mx-auto">
             <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
-                <?php the_title(); ?>
+                <?php echo esc_html(pll__(get_the_title())); ?>
             </h1>
             <div class="max-w-3xl mx-auto bg-white p-8 rounded-lg shadow-md dark:bg-gray-900">
                 <p class="text-center text-gray-600 dark:text-gray-300 mb-8">
-                    <?php esc_html_e('Get in touch with us for any inquiries or to discuss your project.', 'gulfdevs'); ?>
+                    <?php echo esc_html(pll__('Get in touch with us for any inquiries or to discuss your project.')); ?>
                 </p>
                 <?php echo do_shortcode('[contact-form-7 id="65b28b7" title="Contact form 1"]'); ?>
             </div>
             <div class="mt-12 text-center">
-                <h2 class="text-2xl font-bold mb-4"><?php esc_html_e('Our Office', 'gulfdevs'); ?></h2>
+                <h2 class="text-2xl font-bold mb-4"><?php echo esc_html(pll__('Our Office')); ?></h2>
                 <p class="text-gray-600 dark:text-gray-300">
-                    <?php esc_html_e('123 Gulf Tower, Dubai Internet City', 'gulfdevs'); ?><br>
-                    <?php esc_html_e('Dubai, United Arab Emirates', 'gulfdevs'); ?><br>
-                    <?php esc_html_e('Phone: +971 4 123 4567', 'gulfdevs'); ?><br>
-                    <?php esc_html_e('Email: info@gulfdevs.com', 'gulfdevs'); ?>
+                    <?php echo esc_html(pll__('123 Gulf Tower, Dubai Internet City')); ?><br>
+                    <?php echo esc_html(pll__('Dubai, United Arab Emirates')); ?><br>
+                    <?php echo esc_html(pll__('Phone: +971 4 123 4567')); ?><br>
+                    <?php echo esc_html(pll__('Email: info@gulfdevs.com')); ?>
                 </p>
             </div>
         </div>

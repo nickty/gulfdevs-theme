@@ -101,3 +101,58 @@ function gulfdevs_register_footer_strings() {
     }
 }
 add_action('after_setup_theme', 'gulfdevs_register_footer_strings');
+
+function gulfdevs_register_services_strings() {
+    if (function_exists('pll_register_string')) {
+        pll_register_string('Custom Web Development', 'Custom Web Development', 'Services');
+        pll_register_string('Custom Web Development Description', 'We create bespoke websites tailored to your unique business needs, using cutting-edge technologies to ensure optimal performance and user experience.', 'Services');
+        pll_register_string('E-commerce Solutions', 'E-commerce Solutions', 'Services');
+        pll_register_string('E-commerce Solutions Description', 'Our e-commerce platforms are secure, scalable, and optimized for the Gulf market, helping you reach more customers and grow your online business.', 'Services');
+        pll_register_string('Mobile App', 'Mobile App', 'Services');
+        pll_register_string('Mobile App Description', 'We design beautiful, intuitive interfaces that engage your audience and reflect the cultural nuances of the Gulf region.', 'Services');
+        pll_register_string('Database Solutions', 'Database Solutions', 'Services');
+        pll_register_string('Database Solutions Description', 'Our robust data management systems ensure your business data is secure, accessible, and efficiently organized.', 'Services');
+        pll_register_string('Learn More', 'Learn More', 'Services');
+    }
+}
+add_action('after_setup_theme', 'gulfdevs_register_services_strings');
+
+function gulfdevs_register_about_strings() {
+    if (function_exists('pll_register_string')) {
+        pll_register_string('About Us Description', 'GulfDevs is a leading web development company specializing in creating innovative digital solutions for businesses across the Gulf region.', 'About Us');
+        pll_register_string('Our Mission', 'Our Mission', 'About Us');
+        pll_register_string('Mission Description', 'To empower Gulf businesses with cutting-edge web technologies, bridging the gap between traditional values and digital innovation.', 'About Us');
+        pll_register_string('Our Values', 'Our Values', 'About Us');
+        pll_register_string('Innovation in technology', 'Innovation in technology', 'About Us');
+        pll_register_string('Cultural sensitivity and understanding', 'Cultural sensitivity and understanding', 'About Us');
+        pll_register_string('Commitment to quality', 'Commitment to quality', 'About Us');
+        pll_register_string('Customer-centric approach', 'Customer-centric approach', 'About Us');
+    }
+}
+add_action('after_setup_theme', 'gulfdevs_register_about_strings');
+
+function gulfdevs_register_contact_strings() {
+    if (function_exists('pll_register_string')) {
+        pll_register_string('Contact Description', 'Get in touch with us for any inquiries or to discuss your project.', 'Contact');
+        pll_register_string('Our Office', 'Our Office', 'Contact');
+        pll_register_string('Office Address 1', '123 Gulf Tower, Dubai Internet City', 'Contact');
+        pll_register_string('Office Address 2', 'Dubai, United Arab Emirates', 'Contact');
+        pll_register_string('Office Phone', 'Phone: +971 4 123 4567', 'Contact');
+        pll_register_string('Office Email', 'Email: info@gulfdevs.com', 'Contact');
+    }
+}
+add_action('after_setup_theme', 'gulfdevs_register_contact_strings');
+
+
+function gulfdevs_register_portfolio_strings() {
+    if (function_exists('pll_register_string')) {
+        pll_register_string('Gulf E-commerce Platform', 'Gulf E-commerce Platform', 'Portfolio');
+        pll_register_string('Gulf E-commerce Platform Description', 'A scalable e-commerce solution for a leading retailer in the UAE.', 'Portfolio');
+        pll_register_string('Saudi Tourism Portal', 'Saudi Tourism Portal', 'Portfolio');
+        pll_register_string('Saudi Tourism Portal Description', 'An interactive website showcasing Saudi Arabia\'s tourist attractions.', 'Portfolio');
+        pll_register_string('Qatari Financial Dashboard', 'Qatari Financial Dashboard', 'Portfolio');
+        pll_register_string('Qatari Financial Dashboard Description', 'A secure, real-time financial data visualization tool for a Qatari bank.', 'Portfolio');
+        pll_register_string('View Case Study', 'View Case Study', 'Portfolio');
+    }
+}
+add_action('after_setup_theme', 'gulfdevs_register_portfolio_strings');

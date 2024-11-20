@@ -34,7 +34,7 @@
                 $services = array(
                     array('title' => 'Custom Web Development', 'description' => 'Tailored websites built with cutting-edge technology'),
                     array('title' => 'E-commerce Solutions', 'description' => 'Secure and scalable online stores'),
-                    array('title' => 'UI/UX Design', 'description' => 'Beautiful, user-friendly interfaces'),
+                    array('title' => 'Mobile App', 'description' => 'Beautiful, user-friendly Mobile Apps'),
                     array('title' => 'Database Solutions', 'description' => 'Robust data management systems')
                 );
 
