@@ -1,11 +1,11 @@
 <?php get_header(); ?>
 
 <main class="flex-1">
-    <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-primary/5 via-primary/10 to-transparent">
+    <section class="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-b from-primary/5 via-primary/10 to-transparent" style="background-image: url('<?php echo get_template_directory_uri(); ?>/assets/images/arabic-pattern.svg'); background-size: cover; background-position: center;">
         <div class="container px-4 md:px-6 mx-auto">
             <div class="flex flex-col items-center space-y-4 text-center">
                 <div class="space-y-2">
-                    <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
+                    <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none" style="font-family: 'Amiri', serif;">
                         <?php echo esc_html(pll__(get_theme_mod('hero_title', 'Innovative Web Solutions for the Gulf'))); ?>
                     </h1>
                     <p class="mx-auto max-w-[700px] text-gray-500 md:text-xl dark:text-gray-400">
@@ -26,7 +26,7 @@
 
     <section id="services" class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
         <div class="container px-4 md:px-6 mx-auto">
-            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+            <h2 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8" style="font-family: 'Amiri', serif;">
                 <?php esc_html_e(pll__(get_theme_mod('our_services', 'Our Services'))); ?>
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -41,7 +41,7 @@
                 foreach ($services as $service) :
                 ?>
                     <div class="flex flex-col items-center text-center p-4 bg-white rounded-lg shadow-md dark:bg-gray-900">
-                        <h3 class="text-xl font-bold mb-2"><?php echo esc_html(pll__($service['title'])); ?></h3>
+                        <h3 class="text-xl font-bold mb-2" style="font-family: 'Amiri', serif;"><?php echo esc_html(pll__($service['title'])); ?></h3>
                         <p class="text-gray-500 dark:text-gray-400"><?php echo esc_html(pll__($service['description'])); ?></p>
                     </div>
                 <?php endforeach; ?>
@@ -51,7 +51,7 @@
 
     <section class="w-full py-12 md:py-24 lg:py-32 bg-primary text-white">
         <div class="container px-4 md:px-6 mx-auto text-center">
-            <blockquote class="text-2xl italic mb-4">
+            <blockquote class="text-2xl italic mb-4" style="font-family: 'Scheherazade', serif;">
                 <?php echo esc_html(pll__(get_theme_mod('testimonial_quote', 'GulfDevs transformed our online presence. Their understanding of local markets is unparalleled.'))); ?>
             </blockquote>
             <p class="text-lg">
