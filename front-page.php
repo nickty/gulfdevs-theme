@@ -14,10 +14,10 @@
                 </div>
                 <div class="space-x-4">
                     <a href="<?php echo esc_url(get_permalink(get_page_by_path('services'))); ?>" class="inline-flex h-11 items-center justify-center rounded-md bg-primary px-8 text-sm font-medium text-white shadow transition-colors hover:bg-primary/90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-primary">
-                        <?php esc_html_e('Explore Our Services', 'gulfdevs'); ?>
+                        <?php esc_html_e(pll__(get_theme_mod('explore_services', 'Explore Our Services'))); ?>
                     </a>
                     <a href="<?php echo esc_url(get_permalink(get_page_by_path('contact'))); ?>" class="inline-flex h-11 items-center justify-center rounded-md border border-gray-200 bg-white px-8 text-sm font-medium shadow-sm transition-colors hover:bg-gray-100 hover:text-gray-900 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-gray-950 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50 dark:focus-visible:ring-gray-300">
-                        <?php esc_html_e('Contact Us', 'gulfdevs'); ?>
+                        <?php esc_html_e(pll__(get_theme_mod('contact_us', 'Contact Us'))); ?>
                     </a>
                 </div>
             </div>
