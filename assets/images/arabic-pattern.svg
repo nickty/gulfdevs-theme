@@ -5,8 +5,17 @@
       <stop offset="0%" stop-color="#f7f7f7" />
       <stop offset="100%" stop-color="#eaeaea" />
     </radialGradient>
+    <!-- Pattern for the Background -->
+    <pattern id="arabic-pattern" x="0" y="0" width="10" height="10" patternUnits="userSpaceOnUse">
+      <path d="M5,0 L5,10 M0,5 L10,5 M0,0 L10,10 M10,0 L0,10" stroke="#cccccc" stroke-width="0.5" />
+    </pattern>
   </defs>
+
+  <!-- Apply Gradient -->
   <rect width="100" height="100" fill="url(#background-gradient)" />
+
+  <!-- Apply Pattern -->
+  <rect width="100" height="100" fill="url(#arabic-pattern)" opacity="0.15" />
 
   <!-- Central Arabic-Inspired Motif -->
   <g transform="translate(50, 50)" opacity="0.6">
