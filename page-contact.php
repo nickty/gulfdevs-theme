@@ -22,9 +22,7 @@ get_header();
             <div class="mt-12 text-center">
                 <h2 class="text-2xl font-bold mb-4 text-primary"><?php echo esc_html(pll__('Our Office')); ?></h2>
                 <p class="text-gray-600 dark:text-gray-300">
-                    <?php echo esc_html(pll__('123 Gulf Tower, Dubai Internet City')); ?><br>
-                    <?php echo esc_html(pll__('Dubai, United Arab Emirates')); ?><br>
-                    <?php echo esc_html(pll__('Phone: +971 4 123 4567')); ?><br>
+                    <?php echo esc_html(pll__('Remote Office')); ?><br>
                     <?php echo esc_html(pll__('Email: info@gulfdevs.com')); ?>
                 </p>
             </div>

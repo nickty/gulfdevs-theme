@@ -17,17 +17,17 @@ get_header();
                     array(
                         'title' => 'Gulf E-commerce Platform',
                         'description' => 'A scalable e-commerce solution for a leading retailer in the UAE.',
-                        'image' => get_template_directory_uri() . '/assets/images/portfolio-1.jpg'
+                        'image' => get_template_directory_uri() . '/assets/images/ecommerce.png'
                     ),
                     array(
                         'title' => 'Saudi Tourism Portal',
                         'description' => 'An interactive website showcasing Saudi Arabia\'s tourist attractions.',
-                        'image' => get_template_directory_uri() . '/assets/images/portfolio-2.jpg'
+                        'image' => get_template_directory_uri() . '/assets/images/tourism.png'
                     ),
                     array(
                         'title' => 'Qatari Financial Dashboard',
                         'description' => 'A secure, real-time financial data visualization tool for a Qatari bank.',
-                        'image' => get_template_directory_uri() . '/assets/images/portfolio-3.jpg'
+                        'image' => get_template_directory_uri() . '/assets/images/finance.png'
                     )
                 );
 
