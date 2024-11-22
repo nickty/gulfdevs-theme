@@ -185,3 +185,17 @@ function gulfdevs_cf7_scripts() {
     <?php
 }
 add_action('wp_footer', 'gulfdevs_cf7_scripts');
+
+function handle_cf7_submission() {
+    $contact_form = WPCF7_ContactForm::get_instance($_POST['_wpcf7']);
+    $submission = WPCF7_Submission::get_instance();
+    
+    if ($submission) {
+        $result = $contact_form->submit();
+        wp_send_json($result);
+    } else {
+        wp_send_json(array('status' => 'validation_failed'));
+    }
+}
+add_action('wp_ajax_handle_cf7_submission', 'handle_cf7_submission');
+add_action('wp_ajax_nopriv_handle_cf7_submission', 'handle_cf7_submission');
