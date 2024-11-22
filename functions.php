@@ -164,3 +164,24 @@ function load_service_popup() {
 }
 add_action('wp_ajax_load_service_popup', 'load_service_popup');
 add_action('wp_ajax_nopriv_load_service_popup', 'load_service_popup');
+
+
+function gulfdevs_cf7_scripts() {
+    ?>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        if (typeof wpcf7 !== 'undefined') {
+            wpcf7.init();
+            
+            document.addEventListener('wpcf7submit', function(event) {
+                if (event.detail.status === 'mail_sent') {
+                    // Close the popup after successful submission
+                    closeServicePopup();
+                }
+            });
+        }
+    });
+    </script>
+    <?php
+}
+add_action('wp_footer', 'gulfdevs_cf7_scripts');
