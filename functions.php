@@ -156,3 +156,11 @@ function gulfdevs_register_portfolio_strings() {
     }
 }
 add_action('after_setup_theme', 'gulfdevs_register_portfolio_strings');
+
+function load_service_popup() {
+    $service = isset($_POST['service']) ? sanitize_text_field($_POST['service']) : '';
+    include(get_template_directory() . '/service-popup.php');
+    wp_die();
+}
+add_action('wp_ajax_load_service_popup', 'load_service_popup');
+add_action('wp_ajax_nopriv_load_service_popup', 'load_service_popup');
