@@ -1,5 +1,7 @@
 <?php
-// File: archive.php
+/*
+Template Name: Blog
+*/
 get_header();
 ?>
 
