@@ -175,3 +175,11 @@ function enqueue_cf7_scripts() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_cf7_scripts');
+
+
+function enqueue_custom_cf7_script() {
+    if (function_exists('wpcf7_enqueue_scripts')) {
+        wp_enqueue_script('custom-cf7', get_template_directory_uri() . '/js/contact-form.js', array('jquery'), '1.0', true);
+    }
+}
+add_action('wp_enqueue_scripts', 'enqueue_custom_cf7_script');
