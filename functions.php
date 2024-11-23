@@ -166,36 +166,12 @@ add_action('wp_ajax_load_service_popup', 'load_service_popup');
 add_action('wp_ajax_nopriv_load_service_popup', 'load_service_popup');
 
 
-function gulfdevs_cf7_scripts() {
-    ?>
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        if (typeof wpcf7 !== 'undefined') {
-            wpcf7.init();
-            
-            document.addEventListener('wpcf7submit', function(event) {
-                if (event.detail.status === 'mail_sent') {
-                    // Close the popup after successful submission
-                    closeServicePopup();
-                }
-            });
-        }
-    });
-    </script>
-    <?php
-}
-add_action('wp_footer', 'gulfdevs_cf7_scripts');
-
-function handle_cf7_submission() {
-    $contact_form = WPCF7_ContactForm::get_instance($_POST['_wpcf7']);
-    $submission = WPCF7_Submission::get_instance();
-    
-    if ($submission) {
-        $result = $contact_form->submit();
-        wp_send_json($result);
-    } else {
-        wp_send_json(array('status' => 'validation_failed'));
+function enqueue_cf7_scripts() {
+    if (function_exists('wpcf7_enqueue_scripts')) {
+        wpcf7_enqueue_scripts();
+    }
+    if (function_exists('wpcf7_enqueue_styles')) {
+        wpcf7_enqueue_styles();
     }
 }
-add_action('wp_ajax_handle_cf7_submission', 'handle_cf7_submission');
-add_action('wp_ajax_nopriv_handle_cf7_submission', 'handle_cf7_submission');
+add_action('wp_enqueue_scripts', 'enqueue_cf7_scripts');

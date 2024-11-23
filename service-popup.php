@@ -17,35 +17,36 @@ document.addEventListener('DOMContentLoaded', function() {
     const formContainer = document.getElementById('formContainer');
     const formResponse = document.getElementById('formResponse');
 
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
-        
-        const formData = new FormData(form);
-        formData.append('action', 'handle_cf7_submission');
-
-        fetch('<?php echo admin_url('admin-ajax.php'); ?>', {
-            method: 'POST',
-            body: formData
-        })
-        .then(response => response.json())
-        .then(data => {
-            formContainer.classList.add('hidden');
-            formResponse.classList.remove('hidden');
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
             
-            if (data.status === 'mail_sent') {
-                formResponse.innerHTML = '<p class="text-green-600">Thank you for your message. It has been sent.</p>';
-                setTimeout(() => {
-                    closeServicePopup();
-                }, 3000);
-            } else {
+            const formData = new FormData(form);
+            
+            fetch(wpcf7.apiSettings.root + 'contact-form-7/v1/contact-forms/' + wpcf7.getId(form) + '/feedback', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                formContainer.classList.add('hidden');
+                formResponse.classList.remove('hidden');
+                
+                if (data.status === 'mail_sent') {
+                    formResponse.innerHTML = '<p class="text-green-600">Thank you for your message. It has been sent.</p>';
+                    setTimeout(() => {
+                        closeServicePopup();
+                    }, 3000);
+                } else {
+                    formResponse.innerHTML = '<p class="text-red-600">' + data.message + '</p>';
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
                 formResponse.innerHTML = '<p class="text-red-600">There was an error sending your message. Please try again later.</p>';
-            }
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            formResponse.innerHTML = '<p class="text-red-600">There was an error sending your message. Please try again later.</p>';
-            formResponse.classList.remove('hidden');
+                formResponse.classList.remove('hidden');
+            });
         });
-    });
+    }
 });
 </script>
