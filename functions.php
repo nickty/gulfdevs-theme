@@ -183,3 +183,8 @@ function enqueue_custom_cf7_script() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_custom_cf7_script');
+
+function include_service_popup() {
+    include(get_template_directory() . '/service-popup.php');
+}
+add_action('wp_footer', 'include_service_popup');
