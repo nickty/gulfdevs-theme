@@ -1,56 +1,43 @@
-<?php
-/*
-Template Name: Blog
-*/
-get_header();
-?>
+<?php get_header(); ?>
 
-<main class="container mx-auto px-4 py-8">
-    <h1 class="text-3xl font-bold mb-8 text-center"><?php echo esc_html(get_the_archive_title()); ?></h1>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
-            <article class="bg-white dark:bg-gray-800 rounded-lg shadow-md overflow-hidden">
-                <?php if (has_post_thumbnail()) : ?>
-                    <div class="aspect-w-16 aspect-h-9">
-                        <?php the_post_thumbnail('medium_large', ['class' => 'object-cover w-full h-full']); ?>
-                    </div>
-                <?php endif; ?>
-                <div class="p-6">
-                    <h2 class="text-xl font-semibold mb-2">
-                        <a href="<?php the_permalink(); ?>" class="text-primary hover:text-primary-dark transition-colors duration-200">
-                            <?php the_title(); ?>
-                        </a>
-                    </h2>
-                    <div class="text-sm text-gray-600 dark:text-gray-400 mb-4">
-                        <?php echo get_the_date(); ?> | <?php the_category(', '); ?>
-                    </div>
-                    <div class="text-gray-700 dark:text-gray-300 mb-4">
-                        <?php the_excerpt(); ?>
-                    </div>
-                    <a href="<?php the_permalink(); ?>" class="inline-block bg-primary text-white px-4 py-2 rounded hover:bg-primary-dark transition-colors duration-200">
-                        Read More
-                    </a>
-                </div>
-            </article>
-        <?php endwhile; endif; ?>
-    </div>
-
-    <div class="mt-8">
-        <?php the_posts_pagination([
-            'prev_text' => '&laquo; Previous',
-            'next_text' => 'Next &raquo;',
-            'class' => 'flex justify-center space-x-4',
-        ]); ?>
-    </div>
-
-    <div class="mt-16 bg-primary text-white p-8 rounded-lg text-center">
-        <h2 class="text-2xl font-bold mb-4">Need Web Development Services?</h2>
-        <p class="mb-6">Explore our range of services tailored for businesses in the Gulf region.</p>
-        <a href="<?php echo esc_url(home_url('/services')); ?>" class="inline-block bg-white text-primary px-6 py-3 rounded-full font-semibold hover:bg-gray-100 transition-colors duration-200">
-            View Our Services
-        </a>
-    </div>
+<main class="flex-1">
+    <section class="w-full py-12 md:py-24 lg:py-32 bg-gray-100 dark:bg-gray-800">
+        <div class="container px-4 md:px-6 mx-auto">
+            <h1 class="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl text-center mb-8">
+                <?php echo esc_html(pll__('Our Blog')); ?>
+            </h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+                    <article class="bg-white rounded-lg shadow-md overflow-hidden dark:bg-gray-900">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <img src="<?php the_post_thumbnail_url('medium_large'); ?>" alt="<?php the_title_attribute(); ?>" class="w-full h-48 object-cover">
+                        <?php endif; ?>
+                        <div class="p-6">
+                            <h2 class="text-xl font-bold mb-2">
+                                <a href="<?php the_permalink(); ?>" class="text-primary hover:underline">
+                                    <?php the_title(); ?>
+                                </a>
+                            </h2>
+                            <p class="text-gray-600 dark:text-gray-300 mb-4"><?php the_excerpt(); ?></p>
+                            <a href="<?php the_permalink(); ?>" class="inline-flex items-center text-primary hover:underline">
+                                <?php echo esc_html(pll__('Read More')); ?>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-2" viewBox="0 0 20 20" fill="currentColor">
+                                    <path fill-rule="evenodd" d="M12.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-2.293-2.293a1 1 0 010-1.414z" clip-rule="evenodd" />
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                <?php endwhile; endif; ?>
+            </div>
+            <div class="mt-8 flex justify-center">
+                <?php the_posts_pagination(array(
+                    'mid_size' => 2,
+                    'prev_text' => esc_html(pll__('Previous')),
+                    'next_text' => esc_html(pll__('Next')),
+                )); ?>
+            </div>
+        </div>
+    </section>
 </main>
 
 <?php get_footer(); ?>

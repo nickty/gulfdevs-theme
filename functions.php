@@ -188,3 +188,14 @@ function include_service_popup() {
     include(get_template_directory() . '/service-popup.php');
 }
 add_action('wp_footer', 'include_service_popup');
+
+function gulfdevs_register_strings_more() {
+    if (function_exists('pll_register_string')) {
+        // ... existing strings ...
+        pll_register_string('Our Blog', 'Our Blog', 'Blog');
+        pll_register_string('Read More', 'Read More', 'Blog');
+        pll_register_string('Previous', 'Previous', 'Blog');
+        pll_register_string('Next', 'Next', 'Blog');
+    }
+}
+add_action('after_setup_theme', 'gulfdevs_register_strings_more');
