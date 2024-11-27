@@ -199,3 +199,16 @@ function gulfdevs_register_strings_more() {
     }
 }
 add_action('after_setup_theme', 'gulfdevs_register_strings_more');
+
+
+function gulfdevs_theme_support() {
+    add_theme_support('title-tag');
+    add_theme_support('post-thumbnails');
+    add_theme_support('html5', array('search-form', 'comment-form', 'comment-list', 'gallery', 'caption'));
+    add_theme_support('customize-selective-refresh-widgets');
+    add_theme_support('responsive-embeds');
+    add_theme_support('align-wide');
+    add_theme_support('editor-styles');
+    add_editor_style('style-editor.css');
+}
+add_action('after_setup_theme', 'gulfdevs_theme_support');
